@@ -34,11 +34,4 @@ public class ZoomImageView extends ImageView {
             }
         });
     }
-
-    @Override
-    protected Parcelable onSaveInstanceState() {
-        zoomUtil.setZoomView(null);
-        return super.onSaveInstanceState();
-    }
-
 }

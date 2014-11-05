@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
@@ -32,6 +33,8 @@ public class ZoomUtil {
 
     private int duration;
 
+    private static final int ZOOM_VIEW_ID = 1001;
+
     public void setZoomView(ImageView zoomView) {
         this.zoomView = zoomView;
     }
@@ -54,7 +57,7 @@ public class ZoomUtil {
 
     public void zoom(ImageView view, Bitmap bitmap) {
         View decorView = view.getRootView();
-        if (zoomView == null) {
+        if (zoomView == null || zoomView.getRootView() != view.getRootView()) {
             FrameLayout frameLayout = (FrameLayout) decorView.findViewById(android.R.id.content);
             ImageView imageView = new ImageView(context);
             imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));

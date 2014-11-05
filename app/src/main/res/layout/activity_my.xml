@@ -24,7 +24,12 @@
             android:id="@+id/image3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"/>
+            android:src="@drawable/australia"/>
+        <com.myzoom.ZoomImageView
+            android:id="@+id/image4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/argentina"/>
     </LinearLayout>
 
     <ImageView
