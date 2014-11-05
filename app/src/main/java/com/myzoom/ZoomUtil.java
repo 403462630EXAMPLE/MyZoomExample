@@ -33,8 +33,6 @@ public class ZoomUtil {
 
     private int duration;
 
-    private static final int ZOOM_VIEW_ID = 1001;
-
     public void setZoomView(ImageView zoomView) {
         this.zoomView = zoomView;
     }
@@ -70,7 +68,8 @@ public class ZoomUtil {
 
     public void zoom(ImageView view, ImageView zoomView, Bitmap bitmap) {
         if (mCurrentAnimator != null) {
-            mCurrentAnimator.cancel();
+//            mCurrentAnimator.cancel();
+            return ;
         }
 
         final Rect start = new Rect();
